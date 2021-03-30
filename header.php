@@ -9,7 +9,7 @@
             <div class="fixed-header">
                 <div id="container">
                     <nav>
-                        <a href="index.html">
+                        <a href="index.php">
                             <h1>Benoit.Studio</h1>
                         </a>
                         <img src="bstudio.png" class="logo">
