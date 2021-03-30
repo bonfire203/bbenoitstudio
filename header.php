@@ -21,7 +21,7 @@
                                 echo "<a href='signin.php'>Sign Out</a>";
                             }
                         ?>
-                        <a href='about.html'>About Me</a>
+                        <a href='about.php'>About Me</a>
                     </nav>
                 </div>
 
