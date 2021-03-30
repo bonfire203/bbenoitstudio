@@ -14,8 +14,14 @@
                         </a>
                         <img src="bstudio.png" class="logo">
                         <a href="index.php">Home</a>
-                        <a href="signin.php">Sign In</a>
-                        <a href="about.html">About Me</a>
+                        <?php
+                            if(isset($_SESSION["userid"])){
+                                echo "<a href='signin.php'>Sign In</a>";
+                            }else{
+                                echo "<a href='signin.php'>Sign Out</a>";
+                            }
+                        ?>
+                        <a href='about.html'>About Me</a>
                     </nav>
                 </div>
 
