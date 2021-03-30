@@ -12,11 +12,11 @@
         </form>
         <?php
     if(isset($_GET["error"])){
-        if($_GET["error"]== "emptyinput"){
+        if($_GET["error"]== "emptyInput"){
             echo "<p>Fill in all fields before submission</p>";
-        }else if($_GET["error"]=="invaliduid"){
+        }else if($_GET["error"]=="invalidUid"){
             echo "<p>Username invalid</p>";
-        }else if($_GET["error"]=="passwordsdontmatch"){
+        }else if($_GET["error"]=="passwordnullmatch"){
             echo "<p>Password does not match</p>";
         }else if($_GET["error"]=="stmtfailed"){
             echo "<p>Error Occured</p>";

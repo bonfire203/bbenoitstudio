@@ -1,6 +1,6 @@
 
 <?php
-include_once 'signup.inc.php';
+//include_once 'signup.inc.php';
 class Dao {
     
     private $host = "us-cdbr-east-03.cleardb.com";//servername 
@@ -12,7 +12,7 @@ class Dao {
     public function getConnection(){
         try{
             $dbh = new PDO($this->dsn, $this->user, $this->pass);
-            echo "It Worked";
+            //echo "It Worked";
         }catch(PDOException $e){
             //echo 'Connection Failed: ' . $e->getMessage()
             $error = 'Connection Failed: ' . $e->getMessage();
@@ -55,10 +55,27 @@ class Dao {
             exit;
         }
     }
+    function pwdExists($pwd){
+        $conn = $this->getConnection();
+        try{
+            $q = $conn->prepare("SELECT count(*) as total from userdata WHERE password = :password");
+            $q->bindParam(":password" , $pwd);
+            $q->execute();
+            $row = $q->fetch();
+            if($row['total'] == 1){
+                return true;
+            }else{
+                return false;
+            }
+        }catch(Exception $e){
+            echo print_r($e,1);
+            exit;
+        }
+    }
     function createUser($name, $uid, $pwd){
         $conn = $this->getConnection();
         try{
-            echo 'I am in';
+            //echo 'I am in';
             $q = $conn->prepare("INSERT INTO userData (name, userId, password) VALUES (:nameI, :userId, :passwordI)") ;
             //$hashedPwd = password_hash($pwd,PASSWORD_DEFAULT);
             $q->bindParam(":nameI", $name);
@@ -70,6 +87,34 @@ class Dao {
             echo print_r($e,1);
             exit;
         }
+    }
+    function emptyInputLogIn($uid, $pwd){
+        $result = false;
+        if(empty($uid)||empty($pwd)){
+            $result = true;
+        }
+        return $result;
+    }
+    function logInUser($uid, $pwd){
+        //echo 'working';
+        
+        $uidCheck = $this->uidExists($uid);
+        $pwdCheck = $this->pwdExists($pwd);
+        
+        if($uidCheck===false){
+            header("location:../signin.php?error=incorrectuser");
+            exit();
+        }
+        if($pwdCheck===false){
+            header("location:../signin.php?error=incorrectpass");
+            exit();
+        }else if($pwdCheck===true){
+            session_start();
+            $_SESSION["userid"] = $uidCheck["userId"];
+            header("location:../index.php");
+            exit();
+        }
+
     }
     
     
