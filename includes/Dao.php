@@ -75,7 +75,6 @@ class Dao {
     function createUser($name, $uid, $pwd){
         $conn = $this->getConnection();
         try{
-            //echo 'I am in';
             $q = $conn->prepare("INSERT INTO userData (name, userId, password) VALUES (:nameI, :userId, :passwordI)") ;
             //$hashedPwd = password_hash($pwd,PASSWORD_DEFAULT);
             $q->bindParam(":nameI", $name);
@@ -109,19 +108,11 @@ class Dao {
             header("location:../signin.php?error=incorrectpass");
             exit();
         }else if($pwdCheck===true){
+            //echo 'it works';
             session_start();
-            $_SESSION["userid"] = $uidExists["userId"];
+            $_SESSION["userid"] = $uid;
             header("location:../index.php");
             exit();
         }
-
     }
-    
-    
-//     try{
-//         $dbh->query("Select comment_id, comment, date_entered from comment order by date_entered desc", PDO::FETCH_ASSOC)
-//     }catch(exception $e){
-//         echo print_r($e,1)
-//         exit;
-//     }
 }

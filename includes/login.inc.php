@@ -1,7 +1,6 @@
 <?php
 include 'Dao.php';
 if(isset($_POST["submit"])){
-    //echo 'it worked';
     $dao = new Dao();
     $username = $_POST["username"];
     $pwd = $_POST["password"];

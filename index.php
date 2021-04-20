@@ -1,7 +1,6 @@
 <?php
     include_once 'header.php'
     ?>
-        <body>
         <script src="slideshow.js"></script>
         <div id="slideshow">
             <ul class=slides>

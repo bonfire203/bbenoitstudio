@@ -4,12 +4,15 @@
 
 <body>
             <div> 
-                <img class="headshot" src="headshot.png" title="Hi :)">
+                <img class="headshot" src="images/headshot.png" title="Hi :)">
             </div>
             <div class="biotext"> 
-                <p>Hello, my name is Brandon Benoit. I have been a student at Boise State University for too long. I am interested in a variety 
-                    of different things and can become quite obsessive and a perfectionist for the hobbies I take part in. Fun fact my favorite
-                    font is courier new. I am just rambling rambling for space. WIP WIP
+                <p>Brandon Benoit is a long-time student of Boise State University. 
+                    He is a double major in Computer Science and GIMM while double 
+                    minoring in Korean Studies and Japanese Studies. Brandon enjoys 
+                    telling stories and strives for a career that will effectively 
+                    boast his skills through various mediums. Brandon's hobbies include 
+                    photography, rock-climbing and collecting (TCG, games, and comics).
                 </p>
             </div>
     </body>
