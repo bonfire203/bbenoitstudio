@@ -110,7 +110,7 @@ class Dao {
             exit();
         }else if($pwdCheck===true){
             session_start();
-            $_SESSION["userid"] = $uidCheck;
+            $_SESSION["userid"] = $uidExists["userId"];
             header("location:../index.php");
             exit();
         }
