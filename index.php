@@ -4,12 +4,14 @@
         <body>
         <script src="slideshow.js"></script>
         <div id="slideshow">
-            <img class="slide" src="images/chris.jpg" />
-            <img class="slide" src="images/ferriswheel.jpg" />
-            <img class="slide" src="images/flower.jpg" />
-            <img class="slide" src="images/fountain.jpg" />
-            <img class="slide" src="imagespurplesaber.jpg" />
-</div>
+            <ul class=slides>
+                <li class="slide"><img src="images/chris.jpg"/></li>
+                <li class="slide"><img src="images/ferriswheel.jpg" /></li>
+                <li class="slide"><img src="images/flower.jpg" /></li>
+                <li class="slide"><img src="images/fountain.jpg" /></li>
+                <li class="slide"><img src="images/purplesaber.jpg" /></li>
+            </ul>
+        </div>
         </body>
         <?php
     include_once 'footer.php'
