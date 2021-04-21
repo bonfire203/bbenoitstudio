@@ -59,7 +59,8 @@ class Dao {
         $conn = $this->getConnection();
         try{
             $q = $conn->prepare("SELECT count(*) as total from userdata WHERE password = :password");
-            $q->bindParam(":password" , $pwd);
+            $hashedPwd = hash('sha256',$pwd);
+            $q->bindParam(":password" , $hashedPwd);
             $q->execute();
             $row = $q->fetch();
             if($row['total'] == 1){
@@ -77,9 +78,10 @@ class Dao {
         try{
             $q = $conn->prepare("INSERT INTO userData (name, userId, password) VALUES (:nameI, :userId, :passwordI)") ;
             //$hashedPwd = password_hash($pwd,PASSWORD_DEFAULT);
+            $hashedPwd = hash('sha256',$pwd);
             $q->bindParam(":nameI", $name);
             $q->bindParam(":userId", $uid);
-            $q->bindParam(":passwordI", $pwd);
+            $q->bindParam(":passwordI", $hashedPwd);
             $q->execute();
             header("location: ../signup.php?error=none");
         }catch(Exception $e){

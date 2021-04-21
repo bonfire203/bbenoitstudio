@@ -2,11 +2,11 @@
     include_once 'header.php'
     ?>
 
-<body>
+
             <div> 
-                <img class="headshot" src="images/headshot.png" title="Hi :)">
+                <img class="picture" src="images/headshot.png" title="Hi :)">
             </div>
-            <div class="biotext"> 
+            <div class="text"> 
                 <p>Brandon Benoit is a long-time student of Boise State University. 
                     He is a double major in Computer Science and GIMM while double 
                     minoring in Korean Studies and Japanese Studies. Brandon enjoys 
