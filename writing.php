@@ -14,6 +14,7 @@
                 </p>
                 <a href="https://docs.google.com/document/d/1GTGRM-aaaZ1AaXTfhBrfv0t0eQZ44aau5UbX3IoKRZ0/edit?usp=sharing"><p>Code Name Future</p></a>
             </div>
+            
     </body>
     <?php
     include_once 'footer.php'

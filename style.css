@@ -1,3 +1,12 @@
+
+@font-face {
+    font-family: 'zen_dotsregular';
+    src: url('zendots-regular-webfont.woff2') format('woff2'),
+         url('zendots-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*header contents*/
 #header{
     background-color: #000000;
@@ -7,27 +16,31 @@
     margin-bottom: 1.5rem;
     text-decoration: none;
 }
-#header h1{
+#header nav {
     text-align: center;
     font-family: 'zen_dotsregular', Arial, Helvetica, sans-serif;
     font-weight:normal;
-    font-style:normal;  
-}
-#header nav {
+    font-style:normal;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 0;
-    }
+}
 #header nav ul {
     text-align: center;
 }
 #header nav li {
     display: inline;
 }
+#header nav li .list{
+    display: inline;
+}
 #header nav a {
     color:black;
     padding: 1.0rem 2.0rem;
     text-decoration: none;
+}
+.active{
+    background: red;
 }
 
 .logo {
@@ -116,11 +129,5 @@ body{
 p{
     text-align: center;
 }
-@font-face {
-    font-family: 'zen_dotsregular';
-    src: url('zendots-regular-webfont.woff2') format('woff2'),
-         url('zendots-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+
 

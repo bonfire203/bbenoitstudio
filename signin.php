@@ -3,7 +3,7 @@
     ?>
 
             <div>
-                <form action="includes/login.inc.php" method="post">
+                <form for="login" action="includes/login.inc.php" method="post">
                     <div class="container">
                         
                       <input type="text" name="username" placeholder="Enter Username"  required>

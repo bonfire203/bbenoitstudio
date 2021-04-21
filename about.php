@@ -15,6 +15,7 @@
                     photography, rock-climbing and collecting (TCG, games, and comics).
                 </p>
             </div>
+            
     </body>
 
     <?php

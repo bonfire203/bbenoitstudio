@@ -11,7 +11,6 @@
                 <li class="slide"><img src="images/chris.png"/></li>
             </ul>
         </div>
-        <p id="title">Photography</p>
         </body>
         <?php
     include_once 'footer.php'

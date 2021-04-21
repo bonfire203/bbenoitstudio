@@ -63,7 +63,6 @@
                 the ferris wheel, it was dark. I would not have had another chance to get this shot.
                 </p>
             </div>
-            
     </body>
     <?php
     include_once 'footer.php'
